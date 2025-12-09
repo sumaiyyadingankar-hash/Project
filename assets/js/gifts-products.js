@@ -2,12 +2,12 @@
 const giftsProductsData = [
   {
     id: 501,
-    name: "Luxury Perfume Gift Set",
+    name: "Pink Ribbed Ceramic Vase with Bow",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203390/1_maf1ih.jpg"
   },
   {
     id: 502,
-    name: "Beautiful Islamic Wall Frame",
+    name: "Beautiful Wall Frames",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765212087/https___surl_li_jzllrt_mrpb3y.jpg"
   },
   {
@@ -17,7 +17,7 @@ const giftsProductsData = [
   },
   {
     id: 504,
-    name: "Handmade Jewelry Box",
+    name: "Glass Serving Tray with Compartments",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203392/2_dfeepy.jpg"
   }
 ];
@@ -48,3 +48,4 @@ function openProductPage(id) {
 }
 
 window.openProductPage = openProductPage;
+
