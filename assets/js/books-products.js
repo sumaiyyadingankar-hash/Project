@@ -2,17 +2,17 @@
 const booksProductsData = [
   {
     id: 401,
-    name: "The Quran (English Translation)",
+    name: "Healing with the Medicine of the Prophet",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/2_qj58gy.jpg"
   },
   {
     id: 402,
-    name: "Fortress of the Muslim",
+    name: "The Disease and the Cure",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/3_qcdumw.jpg"
   },
   {
     id: 403,
-    name: "Stories of the Prophets",
+    name: "The Sealed Nectar",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203345/1_iuxp9x.jpg"
   },
   {
@@ -48,3 +48,4 @@ function openProductPage(id) {
 }
 
 window.openProductPage = openProductPage;
+
