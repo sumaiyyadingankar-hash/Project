@@ -1,7 +1,7 @@
 // =============== ALL PRODUCTS FROM ALL CATEGORIES ===============
 
 // PRODUCT LIST
-const products = [
+const featuredProductsData = [
   {
     id: 1,
     name: "Black Abaya",
@@ -80,6 +80,7 @@ const homeDecorProductsData = [
 
 // MERGE EVERYTHING
 const allProducts = [
+  ...featuredProductsData,
   ...clothingProductsData,
   ...accessoriesProductsData,
   ...beautyProductsData,
@@ -90,3 +91,4 @@ const allProducts = [
 
 // MAKE GLOBAL
 window.allProducts = allProducts;
+
