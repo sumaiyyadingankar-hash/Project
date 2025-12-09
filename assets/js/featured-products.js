@@ -1,22 +1,22 @@
 // ============== FEATURED PRODUCTS DATA ==============
 const featuredProductsData = [
   {
-    id: 101,
+    id: 1,
     name: "Premium Black Abaya",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196259/1_bq2b6k.jpg"
   },
   {
-    id: 102,
+    id: 2,
     name: "Nida Fabric Abaya",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196260/2_ppeuvb.jpg"
   },
   {
-    id: 103,
+    id: 3,
     name: "Luxury White Khimar",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196264/3_nzrjl3.jpg"
   },
   {
-    id: 201,
+    id: 4,
     name: "Everyday Hijab Combo",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196265/4_ultqkv.jpg"
   },
@@ -55,5 +55,6 @@ displayFeaturedProducts();
 function openProductPage(id) {
   window.location.href = `./pages/product.html?id=${id}`;
 }
+
 
 
