@@ -2,7 +2,7 @@
 const homeDecorProductsData = [
   {
     id: 601,
-    name: "Elegant Islamic Wall Art",
+    name: "Handmade White and Gold Epoxy Clock",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203425/3_fkgiwz.jpg"
   },
   {
@@ -12,12 +12,12 @@ const homeDecorProductsData = [
   },
   {
     id: 603,
-    name: "Decorative Flower Vase",
+    name: "Coffee Mix Ceramic Vase Set",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203427/home-decor_v4tf9w.jpg"
   },
   {
     id: 604,
-    name: "Minimalist Table Lamp",
+    name: "Crescent Moon Ceramic Night Light",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203420/1_my4wn8.jpg"
   }
 ];
@@ -48,3 +48,4 @@ function openProductPage(id) {
 }
 
 window.openProductPage = openProductPage;
+
