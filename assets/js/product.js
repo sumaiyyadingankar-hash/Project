@@ -16,10 +16,23 @@ if (product) {
 }
 
 // CART + WISHLIST BUTTONS
+// document.getElementById("addToCartBtn").addEventListener("click", () => {
+//   addToCart(product);
+// });
+
+// document.getElementById("addToWishlistBtn").addEventListener("click", () => {
+//   addToWishlist(product);
+// });
+
+
 document.getElementById("addToCartBtn").addEventListener("click", () => {
   addToCart(product);
+  // Ensure counters update immediately
+  updateCartCount();
 });
 
 document.getElementById("addToWishlistBtn").addEventListener("click", () => {
   addToWishlist(product);
+  // Ensure counters update immediately
+  updateWishlistCount();
 });
