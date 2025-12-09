@@ -1055,6 +1055,27 @@ hr {
   background: var(--hover-state);
 }
 
+/* Make products 2 per row on phones */
+@media (max-width: 600px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px; /* smaller gap for mobile */
+  }
+
+  .product-card img {
+    height: 160px; /* reduce height for mobile */
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .product-card button {
+    width: 100%;
+    font-size: 0.85rem;
+    margin: 12px 0 10px;
+  }
+}
 /* Website Banner Section */
 .website-banner {
   width: 100%;
@@ -1800,4 +1821,5 @@ hr {
     background: var(--your-hover-color);
   }
 }
+
 
