@@ -2,22 +2,22 @@
 const beautyProductsData = [
   {
     id: 301,
-    name: "Organic Rose Water Toner",
+    name: "NYX Soft Matte Lip Cream",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203314/1_m1bfvx.jpg"
   },
   {
     id: 302,
-    name: "Aloe Vera Gel",
+    name: "Dasique Rose Petal Shadow Palette",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203317/3_ydqqsc.jpg"
   },
   {
     id: 303,
-    name: "Lip & Cheek Tint",
+    name: "Miss Dior Eau de Parfum",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203315/2_hwehha.jpg"
   },
   {
     id: 304,
-    name: "Herbal Face Pack",
+    name: "Beetroot & Vitamin A Serum Shot",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765211612/4_wuznkv.jpg"
   }
 ];
@@ -48,3 +48,4 @@ function openProductPage(id) {
 }
 
 window.openProductPage = openProductPage;
+
