@@ -1767,3 +1767,37 @@ hr {
   }
 }
 
+/* Only apply hover on devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+
+  /* Wishlist icon */
+  .wishlist-icon:hover {
+    transform: scale(1.1);
+    color: #d58da6; /* your hover color */
+  }
+
+  /* Cart icon */
+  .cart-icon:hover {
+    transform: scale(1.1);
+    color: #d58da6; /* your hover color */
+  }
+
+  /* Add-to-cart button */
+  .add-to-cart:hover {
+    transform: translateY(-3px);
+    background: #9f4f6c; /* example hover color */
+    color: #fff;
+  }
+
+  /* Add-to-wishlist button */
+  .add-to-wishlist:hover {
+    background: #9f4f6c;
+    color: #fff;
+  }
+
+  /* Any other buttons with hover */
+  .btn:hover {
+    background: var(--your-hover-color);
+  }
+}
+
