@@ -65,6 +65,14 @@ function removeFromWishlist(id) {
   showToast("Removed from Wishlist");
 }
 
+
+function refreshCounters() {
+  updateCartCount();
+  updateWishlistCount();
+}
+
+
+
 /* ---------------- INCREASE / DECREASE QTY ---------------- */
 function increaseQty(id) {
   const prod = cart.find(item => item.id.toString() === id.toString());
@@ -126,10 +134,20 @@ function updateWishlistCount() {
 }
 
 // Initialize counters on page load
+// document.addEventListener("DOMContentLoaded", () => {
+//   updateCartCount();
+//   updateWishlistCount();
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  updateCartCount();
-  updateWishlistCount();
+  refreshCounters();
 });
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    refreshCounters();
+  }
+});
+
 
 /* ---------------- EXPORT FUNCTIONS ---------------- */
 window.addToCart = addToCart;
@@ -147,3 +165,4 @@ window.addEventListener("pageshow", () => {
   if (typeof renderCart === "function") renderCart();
   if (typeof renderWishlist === "function") renderWishlist();
 });
+
