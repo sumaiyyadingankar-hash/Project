@@ -118,13 +118,25 @@
 }
 
 
-
 @media (max-width: 600px) {
+
   .add-to-cart,
   .add-to-wishlist {
     width: 100%;
+    margin-top: 8px;
+  }
+
+
+  .product-details .product-container,
+  .product-details .info,
+  .product-details .actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+
   }
 }
+
 
 /* CENTER EVERYTHING BETWEEN 600px AND 992px */
 @media (min-width: 600px) and (max-width: 992px) {
@@ -139,3 +151,4 @@
     align-items: center;
   }
 }
+
