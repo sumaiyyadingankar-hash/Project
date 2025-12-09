@@ -4,78 +4,78 @@
 const featuredProductsData = [
   {
     id: 1,
-    name: "Black Abaya",
+    name: "Abaya Style Dress",
     price: "₹1499",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196259/1_bq2b6k.jpg",
-    desc: "Elegant black abaya made from breathable, premium-grade fabric."
+    desc: "Elegant Abaya Style Dress made from linen fabric."
   },
   {
     id: 2,
-    name: "Pink Scarf",
-    price: "₹299",
+    name: "Denim Cotton Top with Buttons & Matching Denim Pants",
+    price: "₹1299",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196260/2_ppeuvb.jpg",
-    desc: "Soft chiffon scarf perfect for casual or formal outfits."
+    desc: "A soft, breathable denim-cotton blend crafted for all-day comfort."
   },
   {
     id: 3,
-    name: "Modest Dress",
-    price: "₹1899",
+    name: "Red & White Floral Print Tunic/Dress with Lace Accents",
+    price: "₹1999",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196264/3_nzrjl3.jpg",
-    desc: "A stylish full-coverage modest dress with premium stitching."
+    desc: "A beautifully crafted red and white floral tunic designed to bring a soft, feminine charm to your wardrobe."
   },
   {
     id: 4,
     name: "Hijab Pins Set",
-    price: "₹99",
-    image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765196265/4_ultqkv.jpg",
-    desc: "Pack of 6 high-quality anti-slip hijab pins."
+    price: "₹2000",
+    image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765262092/download_4_z8ou9g.jpg",
+    desc: "A graceful pink tunic adorned with shimmering sequin sleeves, paired with crisp white trousers for a clean, elegant look."
   }
 ];
 
 // Clothing
 const clothingProductsData = [
-  { id: 101, name: "Black Nida Abaya", price: "₹1499", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/2_al3g3t.jpg", desc: "Premium Nida Fabric Abaya." },
-  { id: 102, name: "Premium White Khimar", price: "₹799", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203232/3_pb4s6d.jpg", desc: "Soft premium khimar." },
-  { id: 103, name: "Soft Jersey Hijab", price: "₹350", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/1_yuojrk.jpg", desc: "Comfortable daily wear hijab." }
+  { id: 101, name: "Modest Imported Denim Long Gown", price: "₹1499", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/2_al3g3t.jpg", desc: "This Modest Western Denim Gown is crafted from soft crush/imported denim fabric, offering complete comfort with a beautifully covered silhouette." },
+  { id: 102, name: "Black & White Floral Asymmetrical Tunic Set", price: "₹799", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203232/3_pb4s6d.jpg", desc: "Lightweight floral tunic top designed with a unique asymmetrical cut and layered over a classic black dress." },
+  { id: 103, name: "black and white floral print dress", price: "₹900", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/1_yuojrk.jpg", desc: "Classic black–white floral print dress crafted in lightweight, comfortable fabric for a chic, effortless look." }
 ];
 
 // Accessories
 const accessoriesProductsData = [
-  { id: 201, name: "Elegant Bracelet", price: "₹250", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203257/2_lvjh8a.jpg", desc: "Beautiful gold-plated bracelet." },
-  { id: 202, name: "Black Handbag", price: "₹699", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203256/1_li9cof.jpg", desc: "Stylish everyday handbag." },
-  { id: 203, name: "Necklace Set", price: "₹350", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203258/3_dhqg9h.jpg", desc: "Minimalistic elegant necklace." }
+  { id: 201, name: "Gold Floral Pearl Headband", price: "₹250", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203257/2_lvjh8a.jpg", desc: "Lightweight gold-toned headband with floral details and pearl embellishments, ideal for parties and special occasions." },
+  { id: 202, name: "Gaiety Women’s Rhinestone Watch Set", price: "₹1499", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203256/1_li9cof.jpg", desc: "This Gaiety women’s set includes a soft pink strap watch and a dainty rhinestone bracelet—perfect for everyday elegance." },
+  { id: 203, name: "Strathberry Leather Chain Bag", price: "₹2000", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203258/3_dhqg9h.jpg", desc: "This Strathberry East/West shoulder bag blends tricolor leather with a refined chain strap for everyday sophistication." }
 ];
 
 // Beauty
 const beautyProductsData = [
-  { id: 301, name: "Lip Gloss", price: "₹199", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203314/1_m1bfvx.jpg", desc: "Smooth glossy finish." },
-  { id: 302, name: "Compact Powder", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203317/3_ydqqsc.jpg", desc: "Long-lasting compact." },
-  { id: 303, name: "Eyeliner", price: "₹149", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203315/2_hwehha.jpg", desc: "Smudge-proof eyeliner." },
-   { id: 304, name: "Eyeliner", price: "₹149", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765211612/4_wuznkv.jpg", desc: "Smudge-proof eyeliner." }
+  { id: 301, name: "NYX Soft Matte Lip Cream", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203314/1_m1bfvx.jpg", desc: "A blend of lipstick and gloss—soft, buttery, and matte, perfect for everyday wear." },
+  { id: 302, name: "Dasique Rose Petal Shadow Palette", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203317/3_ydqqsc.jpg", desc: "A beautifully curated mix of rosy pinks and soft neutrals—perfect for everyday elegance or soft glam." },
+  { id: 303, name: "Miss Dior Eau de Parfum", price: "₹1049", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203315/2_hwehha.jpg", desc: "A timeless floral fragrance with notes of fresh rose, soft woods, and radiant elegance." },
+  { id: 304, name: "Beetroot & Vitamin A Serum Shot", price: "₹349", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765211612/4_wuznkv.jpg", desc: "Sweet Chef’s Beet + Vitamin A Serum delivers hydration and antioxidant benefits for a healthy, glowing complexion." }
 ];
 
 // Books
 const booksProductsData = [
-  { id: 401, name: "Islamic Book", price: "₹249", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/2_qj58gy.jpg", desc: "Must-read Islamic guide." },
-  { id: 402, name: "Motivational Book", price: "₹199", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/3_qcdumw.jpg", desc: "Book to inspire your life." },
-   { id: 403, name: "Motivational Book", price: "₹199", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203345/1_iuxp9x.jpg", desc: "Book to inspire your life." },
-    { id: 404, name: "Motivational Book", price: "₹199", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765211845/Atomic_Habits_tmmpj7.jpg", desc: "Book to inspire your life." }
+  { id: 401, name: "Healing with the Medicine of the Prophet", price: "₹259", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/2_qj58gy.jpg", desc: "A comprehensive Islamic guide to health and healing, blending faith, natural medicine, and Prophetic teachings." },
+  { id: 402, name: "The Disease and the Cure", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203348/3_qcdumw.jpg", desc: "A true gem by Imam al-Qayyim and a must read for Muslims looking to get closer to their creator. " },
+  { id: 403, name: "The Sealed Nectar", price: "₹699", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203345/1_iuxp9x.jpg", desc: "The Sealed Nectar presents the Seerah of the Prophet ﷺ in a clear, comprehensive, and easy-to-read format." },
+  { id: 404, name: "Atomic Habits", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765211845/Atomic_Habits_tmmpj7.jpg", desc: "A practical guide to transforming your life through small, consistent habit changes that lead to remarkable results." }
 ];
 
 // Gifts
 const giftsProductsData = [
-  { id: 501, name: "Gift Hamper", price: "₹599", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203390/1_maf1ih.jpg", desc: "Perfect gift set." },
-  { id: 502, name: "Chocolate Box", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765212087/https___surl_li_jzllrt_mrpb3y.jpg", desc: "Premium chocolates." },
-   { id: 503, name: "Chocolate Box", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203395/3_esujwp.jpg", desc: "Premium chocolates." },
-    { id: 504, name: "Chocolate Box", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203392/2_dfeepy.jpg", desc: "Premium chocolates." }
+  { id: 501, name: "Pink Ribbed Ceramic Vase with Bow", price: "₹599", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203390/1_maf1ih.jpg", desc: "A charming pink ribbed ceramic vase adorned with a delicate bow, perfect for flowers or home decor accents." },
+  { id: 502, name: "Beautiful Wall Frames", price: "₹399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765212087/https___surl_li_jzllrt_mrpb3y.jpg", desc: "A curated set of six unframed botanical art prints, perfect for adding a natural, elegant touch to your walls." },
+  { id: 503, name: "Premium Coffee Mug Set", price: "₹1399", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203395/3_esujwp.jpg", desc: "Enjoy your coffee in style with these marble-patterned mugs, complete with luxurious gold handles." },
+  { id: 504, name: "Glass Serving Tray with Compartments", price: "₹599", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203392/2_dfeepy.jpg", desc: "A stylish octagonal glass serving dish with divided compartments, perfect for nuts, candies, or dried fruits." }
 ];
 
 // Home Decor
 const homeDecorProductsData = [
-  { id: 601, name: "Wall Art", price: "₹499", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203425/3_fkgiwz.jpg", desc: "Beautiful Islamic wall frame." },
-  { id: 602, name: "Scented Candle", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203422/2_nexadk.jpg", desc: "Long-lasting scented candle." },
-    { id: 603, name: "Scented Candle", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203427/home-decor_v4tf9w.jpg", desc: "Long-lasting scented candle." },
-      { id: 604, name: "Scented Candle", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203420/1_my4wn8.jpg", desc: "Long-lasting scented candle." }
+  { id: 601, name: "Handmade White and Gold Epoxy Clock", price: "₹499", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203425/3_fkgiwz.jpg", desc: "A handcrafted wall clock made with white and brown/gold epoxy resin, adding a modern artistic touch to any space." },
+  { id: 602, name: "Aromatic Scented Candles", price: "₹299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203422/2_nexadk.jpg", desc: "Long-lasting scented candle." },
+  { id: 603, name: "Coffee Mix Ceramic Vase Set", price: "₹1299", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203427/home-decor_v4tf9w.jpg", desc: "A set of ceramic vases in warm coffee-inspired shades, perfect for adding a cozy, stylish touch to your home decor." },
+  { id: 604, name: "Crescent Moon Ceramic Night Light", price: "₹1599", image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203420/1_my4wn8.jpg", desc: "A charming crescent moon-shaped night light made of ceramic, perfect for adding a soft, cozy glow to any room." }
 ];
 
 // MERGE EVERYTHING
@@ -91,4 +91,3 @@ const allProducts = [
 
 // MAKE GLOBAL
 window.allProducts = allProducts;
-
