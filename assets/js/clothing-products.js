@@ -1,22 +1,22 @@
+
 // ============== CLOTHING PRODUCTS DATA ==============
 const clothingProductsData = [
   {
     id: 101,
-    name: "Black Nida Abaya",
+    name: "Modest Imported Denim Long Gown",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/2_al3g3t.jpg"
   },
   {
     id: 102,
-    name: "Premium White Khimar",
+    name: "Black & White Floral Asymmetrical Tunic Set",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203232/3_pb4s6d.jpg"
   },
   {
     id: 103,
-    name: "Soft Jersey Hijab",
+    name: "black and white floral print dress",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203231/1_yuojrk.jpg"
   }
 ];
-
 // Container
 const clothingContainer = document.getElementById("clothingProducts");
 
