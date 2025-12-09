@@ -119,6 +119,18 @@
 
 
 @media (max-width: 600px) {
+    .info h1 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  margin-top: 8px;
+}
+
+.info h2 {
+  font-size: 1.2rem;
+  color: #b45c7b;
+  margin-bottom: 25px;
+}
 
   .add-to-cart,
   .add-to-wishlist {
@@ -151,4 +163,5 @@
     align-items: center;
   }
 }
+
 
