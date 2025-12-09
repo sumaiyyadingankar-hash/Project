@@ -2,17 +2,17 @@
 const accessoriesProductsData = [
   {
     id: 201,
-    name: "Elegant Gold Bracelet",
+    name: "Gold Floral Pearl Headband",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203257/2_lvjh8a.jpg"
   },
   {
     id: 202,
-    name: "Pearl Earrings",
+    name: "Gaiety Women’s Rhinestone Watch Set",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203256/1_li9cof.jpg"
   },
   {
     id: 203,
-    name: "Silk Scarf",
+    name: "Strathberry Leather Chain Bag",
     image: "https://res.cloudinary.com/dzpjquuvs/image/upload/v1765203258/3_dhqg9h.jpg"
   }
 ];
@@ -43,3 +43,4 @@ function openProductPage(id) {
 }
 
 window.openProductPage = openProductPage;
+
