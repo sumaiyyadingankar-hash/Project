@@ -1,373 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout - Sumaiya Trendy Collection</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-
-    .checkout-container {
-      max-width: 1200px;
-      margin: 50px auto;
-      display: flex;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    /* Left: Form */
-    .checkout-form {
-      flex: 2;
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .checkout-form h2 {
-      margin-bottom: 25px;
-      color: #333;
-    }
-
-    .checkout-form label {
-      display: block;
-      margin: 12px 0 5px;
-      font-weight: 500;
-    }
-
-    .checkout-form input,
-    .checkout-form textarea,
-    .checkout-form select {
-      width: 100%;
-      padding: 12px 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      margin-bottom: 15px;
-      resize: none;
-    }
-
-    .checkout-form textarea {
-      height: 80px;
-    }
-
-    /* Fake payment card styling */
-    .payment-card {
-      background: linear-gradient(145deg, #fff, #f1f1f1);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 15px;
-      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Right: Cart Summary */
-    .cart-summary {
-      flex: 1;
-      background: #fff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 40px;
-      height: fit-content;
-    }
-
-    .cart-summary h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      margin: 10px 0;
-      font-size: 16px;
-      color: #444;
-    }
-
-    .total-row {
-      font-size: 18px;
-      font-weight: bold;
-      padding-top: 10px;
-      border-top: 2px solid #eee;
-      margin-top: 10px;
-    }
-
-    .place-order-btn {
-      width: 100%;
-      padding: 14px;
-      background: var(--secondary-color);
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 20px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .place-order-btn:hover {
-      background: var(--hover-state);
-    }
-
-    /* SUCCESS POPUP */
-    .success-popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-       
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-       padding: 20px; /* ensures spacing on small screens */
-  
-    
-    }
-
-    .popup-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 400px;
-       width: 100%; /* fills available width on mobile */
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      /* Animation */
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 0.5s forwards;
-    }
-
-    .popup-box h3 {
-      margin-bottom: 15px;
-      color: #4BB543;
-    }
-
-    .popup-box p {
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .popup-box button {
-      padding: 12px 20px;
-      background: var(--secondary-color);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout — Sumaiya Trendy Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f7fb;
+    --card:#ffffff;
+    --muted:#8b8f98;
+    --shadow:0 8px 30px rgba(42,52,75,0.08);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  *{box-sizing:border-box;}
+  body{
+    font-family:"Poppins",system-ui;
+    margin:0;
+    color:#222;
+    padding:28px;
   }
-}
+  .container{
+    max-width:1100px;
+    margin:18px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:22px;
+    align-items:start;
+  }
+  .checkout-card{
+    background:var(--card);
+    border-radius:14px;
+    padding:22px;
+    box-shadow:var(--shadow);
+  }
+  h1{font-size:20px;margin:0;}
+  p.lead{margin:6px 0 0;color:var(--muted);font-size:13px;}
+  form .row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;margin-top:14px;
+  }
+  form label{
+    font-size:13px;margin-bottom:6px;color:#444;font-weight:600;display:block;
+  }
+  input, textarea{
+    width:100%;padding:11px 12px;border-radius:10px;border:1px solid #e6e9ef;font-size:14px;background:#fff;
+  }
+  textarea{min-height:86px;resize:vertical;}
+  .full{grid-column:1/-1;}
+  .summary{
+    background:#fff;padding:18px;border-radius:14px;box-shadow:var(--shadow);
+    position:sticky;top:28px;
+  }
+  .summary .line{
+    display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f3f8;
+  }
+  .total{
+    padding-top:12px;display:flex;justify-content:space-between;font-size:18px;font-weight:700;
+  }
+  .confirm-btn{
+    width:100%;margin-top:14px;padding:12px;border-radius:10px;border:none;font-size:15px;font-weight:700;cursor:pointer;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 20px rgba(107,107,255,0.09);
+  }
+  .overlay{
+    position:fixed;inset:0;background:rgba(8,10,20,0.45);display:none;justify-content:center;align-items:center;z-index:9999;padding:18px;
+  }
+  .modal{
+    width:520px;max-width:96%;background:#fff;padding:18px;border-radius:14px;box-shadow:0 20px 60px rgba(20,30,80,0.18);
+    animation:pop .22s ease-out forwards;
+  }
+  @keyframes pop{
+    from{opacity:0;transform:translateY(24px) scale(.98);}
+    to{opacity:1;transform:none;}
+  }
+  .btn-primary{padding:10px;border-radius:10px;border:none;font-weight:700;cursor:pointer;background:#b45c7b;color:#fff;}
+  .btn-ghost{padding:10px;border-radius:10px;border:1px solid #e6e9ef;background:transparent;cursor:pointer;}
+  .success-icon{
+    width:70px;height:70px;background:#d4f8df;color:#2d7a41;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:36px;font-weight:bold;box-shadow:0 0 10px #d6f3d9;
+  }
+  @media(max-width:880px){
+    .container{grid-template-columns:1fr;}
+    .summary{position:static;margin-top:12px;}
+  }
 
-
-
-    @media(max-width: 900px) {
-      .checkout-container {
-        flex-direction: column;
-      }
-
-      .cart-summary {
-        position: static;
-        top: auto;
-      }
-    }
-
-    /* Mobile adjustments */
-@media(max-width: 600px){
-    .popup-box {
-        padding: 20px;
-    }
-
-    .popup-box h3 {
-        font-size: 18px;
-    }
-
-    .popup-box p {
-        font-size: 14px;
-    }
-
-    .popup-box button {
-        width: 100%;
-        padding: 12px;
-    }
-}
-  </style>
+  .confirm-btn{
+    background:#b45c7b ;
+  }
+</style>
 </head>
-
 <body>
 
-  <div class="checkout-container">
-    <!-- LEFT: FORM -->
-    <div class="checkout-form">
-      <h2>Checkout</h2>
-      <form id="checkoutForm">
-        <label>Full Name</label>
-        <input type="text" id="name" required>
-
-        <label>Email</label>
-        <input type="email" id="email" required>
-
-        <label>Mobile Number</label>
-        <input type="tel" id="mobile" required>
-
-        <label>Address</label>
-        <textarea id="address" required></textarea>
-
-        <label>City</label>
-        <input type="text" id="city" required>
-
-        <label>Pincode</label>
-        <input type="number" id="pincode" required>
-
-        <label>Payment Method</label>
-        <div class="payment-card">
-          <select id="payment">
-            <option>Cash on Delivery (COD)</option>
-            <option>Fake Card Payment</option>
-          </select>
-        </div>
-      </form>
+<div class="container">
+  <!-- Checkout Form -->
+  <section class="checkout-card">
+    <div class="checkout-header">
+      <div>
+        <h1>Checkout</h1>
+        <p class="lead">Almost there! Fill your details. ✨</p>
+      </div>
     </div>
+    <form id="checkoutForm" novalidate>
+      <div class="row">
+        <div><label>Full name</label><input id="name" type="text" placeholder="Sumaiya Dingankar" required></div>
+        <div><label>Email</label><input id="email" type="email" placeholder="you@example.com" required></div>
+        <div><label>Mobile</label><input id="mobile" type="tel" placeholder="+91 98xxxxxxx" required></div>
+        <div><label>City</label><input id="city" type="text" placeholder="Pune" required></div>
+        <div class="full"><label>Address</label><textarea id="address" placeholder="House no, area, landmark..." required></textarea></div>
+        <div><label>Pincode</label><input id="pincode" type="text" placeholder="4110xx" required></div>
+      </div>
+    </form>
+  </section>
 
-    <!-- RIGHT: CART SUMMARY -->
-    <div class="cart-summary">
-      <h3>Order Summary</h3>
-      <div class="summary-row">
-        <span>Total Items</span>
-        <span id="summaryItems">0</span>
-      </div>
-      <div class="summary-row">
-        <span>Subtotal</span>
-        <span>₹<span id="summarySubtotal">0</span></span>
-      </div>
-      <div class="summary-row">
-        <span>Delivery Charges</span>
-        <span id="summaryDelivery">Free</span>
-      </div>
-      <div class="summary-row total-row">
-        <span>Grand Total</span>
-        <span>₹<span id="summaryGrandTotal">0</span></span>
-      </div>
-      <button id="placeOrder" class="place-order-btn">Confirm Order</button>
-    </div>
+  <!-- Summary -->
+  <aside class="summary">
+    <h3>Order Summary</h3>
+    <div class="line"><div>Items</div><div id="summaryItems">0</div></div>
+    <div class="line"><div>Subtotal</div><div>₹<span id="summarySubtotal">0</span></div></div>
+    <div class="line"><div>Delivery</div><div id="summaryDelivery">Free</div></div>
+    <div class="total"><div>Grand Total</div><div>₹<span id="summaryGrandTotal">0</span></div></div>
+    <button id="openGateway" class="confirm-btn">Proceed to payment</button>
+  </aside>
+</div>
+
+<!-- Payment Modal -->
+<div class="overlay" id="gatewayOverlay">
+  <div class="modal">
+    <div id="gatewayFormArea" style="margin-top:12px;">
+      <div style="margin-bottom:12px;font-size:13px;font-weight:600;color:#555; display:flex; align-items:center; gap:10px;">
+  <span>Cards Accepted:</span>
+  <div style="display:flex; gap:10px; align-items:center;">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlepay.svg" style="height:22px;" alt="GPay">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" style="height:22px;" alt="Mastercard">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paypal.svg" style="height:22px;" alt="PayPal">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" style="height:22px;" alt="Visa">
   </div>
+</div>
 
-  <!-- SUCCESS POPUP -->
-  <div id="orderSuccess" class="success-popup">
-    <div class="popup-box">
-      <h3>🎉 Order Placed Successfully!</h3>
-      <p>Thank you for shopping with Sumaiya Trendy Collection 💕</p>
-      <button id="continueBtn">Continue Shopping</button>
+      <label>Card Number</label><input id="cardNumber" maxlength="19" placeholder="4244 4244 4244 4244">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+        <div><label>Expiry</label><input id="cardExp" maxlength="5" placeholder="MM/YY"></div>
+        <div><label>CVV</label><input id="cardCvv" maxlength="4" placeholder="123"></div>
+      </div>
+      <label style="margin-top:12px;">Name on card</label>
+      <input id="cardName" placeholder="Sumaiya Dingankar">
+      <div style="display:flex;gap:10px;margin-top:14px;">
+        <button id="btnPayNow" class="btn-primary">Pay ₹0</button>
+      </div>
     </div>
+
+    <!-- Success -->
+    <div id="successArea" style="display:none; text-align:center; padding:25px;">
+      <div class="success-icon">✔</div>
+      <h3 style="margin-top:15px;font-size:20px;color:#2d7a41;font-weight:600;">Order Placed Successfully!</h3>
+      <p style="color:#666;margin-top:5px;">Thank you for shopping with us 💕</p>
+      <button id="closeSuccessBtn" style="margin-top:20px;background:#b45c7b;color:white;padding:10px 20px;border:none;border-radius:8px;font-size:15px;cursor:pointer;">Continue Shopping</button>
+    </div>
+
+    <button id="closeModal" class="btn-ghost" style="position:absolute; top:12px; right:12px;">✕</button>
   </div>
+</div>
 
-  <div id="toastBox"></div>
+<script>
+const cart = JSON.parse(localStorage.getItem("cart"))||[];
+const summaryItems = document.getElementById("summaryItems");
+const summarySubtotal = document.getElementById("summarySubtotal");
+const summaryGrandTotal = document.getElementById("summaryGrandTotal");
 
-
-  <script src="../assets/js/cart.js"></script>
- <script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  const summaryItems = document.getElementById("summaryItems");
-  const summarySubtotal = document.getElementById("summarySubtotal");
-  const summaryDelivery = document.getElementById("summaryDelivery");
-  const summaryGrandTotal = document.getElementById("summaryGrandTotal");
-  const placeBtn = document.getElementById("placeOrder");
-  const popup = document.getElementById("orderSuccess");
-  const continueBtn = document.getElementById("continueBtn");
-  const toastBox = document.getElementById("toastBox");
-
-  // Render order summary
-  function renderCheckoutSummary() {
-    let subtotal = 0;
-    cart.forEach(item => {
-      const price = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
-      subtotal += price * (item.qty || 1);
-    });
-
-    summaryItems.innerText = cart.length;
-    summarySubtotal.innerText = subtotal;
-    summaryDelivery.innerText = subtotal > 0 ? "Free" : "—";
-    summaryGrandTotal.innerText = subtotal;
-  }
-
-  renderCheckoutSummary();
-
-  // Toast function
-  function showToast(message, type = "error") {
-    const toast = document.createElement("div");
-    toast.className = `toast ${type}`;
-    toast.innerHTML = `<span>${message}</span>
-                       <span class="close" onclick="this.parentElement.remove()">&times;</span>`;
-    toastBox.appendChild(toast);
-    setTimeout(() => toast.remove(), 4000);
-  }
-
-  // Confirm order
-  placeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const city = document.getElementById("city").value.trim();
-    const pincode = document.getElementById("pincode").value.trim();
-
-    if (!name || !email || !mobile || !address || !city || !pincode) {
-      showToast("Please fill all required fields!");
-      return;
-    }
-
-    if (cart.length === 0) {
-      showToast("Your cart is empty!");
-      return;
-    }
-
-    // Show success popup
-    popup.style.display = "flex";
-
-    // Clear cart
-    cart = [];
-    localStorage.setItem("cart", JSON.stringify(cart));
-    renderCheckoutSummary();
+function formatAmount(n){return Number(n).toFixed(2).replace('.00','');}
+function calcSummary(){
+  let subtotal=0;
+  cart.forEach(it=>{
+    subtotal += parseFloat((it.price||"0").toString().replace(/[^0-9.]/g,""))*(it.qty||1);
   });
+  summaryItems.textContent = cart.length;
+  summarySubtotal.textContent = formatAmount(subtotal);
+  summaryGrandTotal.textContent = formatAmount(subtotal);
+  document.getElementById("btnPayNow").textContent="Pay ₹"+formatAmount(subtotal);
+}
+calcSummary();
 
-  // Continue shopping button
-  continueBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-    window.location.href = "../pages/shop.html";
-  });
-
+const overlay=document.getElementById("gatewayOverlay");
+document.getElementById("openGateway").addEventListener("click",()=>{
+  const name=document.getElementById("name").value.trim();
+  const email=document.getElementById("email").value.trim();
+  const mobile=document.getElementById("mobile").value.trim();
+  const city=document.getElementById("city").value.trim();
+  const address=document.getElementById("address").value.trim();
+  const pincode=document.getElementById("pincode").value.trim();
+  if(!name||!email||!mobile||!city||!address||!pincode){ alert("Please fill checkout form 💗"); return; }
+  if(cart.length===0){ alert("Cart is empty ❤️"); return; }
+  overlay.style.display="flex";
 });
+document.getElementById("closeModal").addEventListener("click",()=>overlay.style.display="none");
+document.getElementById("btnPayNow").addEventListener("click",()=>{
+  const num=document.getElementById("cardNumber").value.trim();
+  const exp=document.getElementById("cardExp").value.trim();
+  const cvv=document.getElementById("cardCvv").value.trim();
+  if(!num||num.replace(/\s/g,'').length<12){ alert("Enter valid card number"); return; }
+  if(!/^\d{2}\/\d{2}$/.test(exp)){ alert("Expiry must be MM/YY"); return; }
+  if(!cvv||cvv.length<3){ alert("Invalid CVV"); return; }
+  document.getElementById("gatewayFormArea").style.display="none";
+  document.getElementById("successArea").style.display="";
+  localStorage.setItem("cart","[]");
+  calcSummary();
+});
+document.getElementById("closeSuccessBtn").addEventListener("click",()=>window.location.href="../pages/shop.html");
 </script>
-
-
 </body>
-
 </html>
