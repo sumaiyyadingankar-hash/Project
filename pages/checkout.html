@@ -87,6 +87,14 @@
   .confirm-btn{
     background:#b45c7b ;
   }
+
+  @media (max-width: 600px) {
+  form .row {
+    grid-template-columns: 1fr; /* stack fields vertically */
+    gap: 12px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -194,18 +202,30 @@ document.getElementById("openGateway").addEventListener("click",()=>{
 });
 document.getElementById("closeModal").addEventListener("click",()=>overlay.style.display="none");
 document.getElementById("btnPayNow").addEventListener("click",()=>{
-  const num=document.getElementById("cardNumber").value.trim();
-  const exp=document.getElementById("cardExp").value.trim();
-  const cvv=document.getElementById("cardCvv").value.trim();
-  if(!num||num.replace(/\s/g,'').length<12){ alert("Enter valid card number"); return; }
+  const num = document.getElementById("cardNumber").value.trim();
+  const exp = document.getElementById("cardExp").value.trim();
+  const cvv = document.getElementById("cardCvv").value.trim();
+
+  if(!num || num.replace(/\s/g,'').length < 12){ alert("Enter valid card number"); return; }
   if(!/^\d{2}\/\d{2}$/.test(exp)){ alert("Expiry must be MM/YY"); return; }
-  if(!cvv||cvv.length<3){ alert("Invalid CVV"); return; }
-  document.getElementById("gatewayFormArea").style.display="none";
-  document.getElementById("successArea").style.display="";
+  if(!cvv || cvv.length < 3){ alert("Invalid CVV"); return; }
+
+  // Hide payment form
+  document.getElementById("gatewayFormArea").style.display = "none";
+
+  // Show success message
+  document.getElementById("successArea").style.display = "";
+
+  // Hide the top-right close button
+  document.getElementById("closeModal").style.display = "none";
+
+  // Clear cart
   localStorage.setItem("cart","[]");
   calcSummary();
 });
+
 document.getElementById("closeSuccessBtn").addEventListener("click",()=>window.location.href="../pages/shop.html");
 </script>
 </body>
 </html>
+
