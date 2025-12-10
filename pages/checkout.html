@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Checkout — Sumaiya Trendy Collection</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
 <style>
   :root{
     --bg:#f7f7fb;
@@ -93,7 +94,7 @@
     grid-template-columns: 1fr; /* stack fields vertically */
     gap: 12px;
   }
-    .modal {
+  .modal {
     padding-top: 50px; /* add extra space for close button */
   }
 
@@ -101,7 +102,22 @@
     top: 10px;        /* inside the new padding space */
     right: 10px;
   }
+  
 }
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 </style>
 </head>
@@ -166,7 +182,7 @@
     </div>
 
     <!-- Success -->
-    <div id="successArea" style="display:none; text-align:center; padding:25px;">
+    <div id="successArea" style="display:none; text-align:center; padding:25px;animation: fadeInUp 1s ease;">
       <div class="success-icon">✔</div>
       <h3 style="margin-top:15px;font-size:20px;color:#2d7a41;font-weight:600;">Order Placed Successfully!</h3>
       <p style="color:#666;margin-top:5px;">Thank you for shopping with us 💕</p>
@@ -176,6 +192,8 @@
     <button id="closeModal" class="btn-ghost" style="position:absolute; top:12px; right:12px;">✕</button>
   </div>
 </div>
+<!-- Toast Notification Container -->
+  <div id="toastBox"></div>
 
 <script>
 const cart = JSON.parse(localStorage.getItem("cart"))||[];
@@ -204,8 +222,8 @@ document.getElementById("openGateway").addEventListener("click",()=>{
   const city=document.getElementById("city").value.trim();
   const address=document.getElementById("address").value.trim();
   const pincode=document.getElementById("pincode").value.trim();
-  if(!name||!email||!mobile||!city||!address||!pincode){ alert("Please fill checkout form 💗"); return; }
-  if(cart.length===0){ alert("Cart is empty ❤️"); return; }
+  if(!name||!email||!mobile||!city||!address||!pincode){ showToast("Please fill checkout form"); return; }
+  if(cart.length===0){ showToast("Cart is empty ❤️"); return; }
   overlay.style.display="flex";
 });
 document.getElementById("closeModal").addEventListener("click",()=>overlay.style.display="none");
@@ -214,9 +232,9 @@ document.getElementById("btnPayNow").addEventListener("click",()=>{
   const exp = document.getElementById("cardExp").value.trim();
   const cvv = document.getElementById("cardCvv").value.trim();
 
-  if(!num || num.replace(/\s/g,'').length < 12){ alert("Enter valid card number"); return; }
-  if(!/^\d{2}\/\d{2}$/.test(exp)){ alert("Expiry must be MM/YY"); return; }
-  if(!cvv || cvv.length < 3){ alert("Invalid CVV"); return; }
+  if(!num || num.replace(/\s/g,'').length < 12){ showToast("Enter valid card number"); return; }
+  if(!/^\d{2}\/\d{2}$/.test(exp)){ showToast("Expiry must be MM/YY"); return; }
+  if(!cvv || cvv.length < 3){ showToast("Invalid CVV"); return; }
 
   // Hide payment form
   document.getElementById("gatewayFormArea").style.display = "none";
@@ -233,8 +251,34 @@ document.getElementById("btnPayNow").addEventListener("click",()=>{
 });
 
 document.getElementById("closeSuccessBtn").addEventListener("click",()=>window.location.href="../pages/shop.html");
+
+
 </script>
+<script>
+function showToast(msg) {
+  const box = document.getElementById("toastBox");
+  const div = document.createElement("div");
+
+  div.className = "toast";
+  div.textContent = msg;
+
+  div.style.background = "#b45c7b";
+  div.style.color = "white";
+  div.style.padding = "10px 16px";
+  div.style.marginTop = "10px";
+  div.style.borderRadius = "8px";
+  div.style.fontSize = "14px";
+  div.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+  div.style.animation = "fadeIn 0.3s ease";
+
+  box.appendChild(div);
+
+  setTimeout(() => {
+    div.style.opacity = "0";
+    setTimeout(() => div.remove(), 400);
+  }, 2000);
+}
+</script>
+
 </body>
 </html>
-
-
